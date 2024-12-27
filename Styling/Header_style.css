@@ -1,0 +1,187 @@
+/* Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto; /* Menjaga rasio aspek */
+}
+
+
+.jumbotron{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(/image/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+    height: 240px;
+    color: white;
+}
+
+.jumbotron::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content{
+    display: flex;
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    width: 100%;
+}
+/*Foto dan Nama */
+.profile-info{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Nama */
+.profile-info h1{
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 2px 2px 4x rgba(0, 0, 0, 0.7);
+}
+
+.right-contetn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Navigation Bar */
+
+#navigation-bar{
+    margin-top: 20px;
+    
+}
+#navigation-bar ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+#navigation-bar a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* cta-button*/
+.cta-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cta a{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.cta {
+    background: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 0, 0; /* Bayangan bawah */
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.cta:hover {
+    box-shadow: 0 3px 0 silver; /* Bayangan lebih besar */
+    transform: scale(1.05); /* Perbesar sedikit */
+}
+/* animasi jumbtron */
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translate(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.header-content{
+    animation: fadeIn 1s ease-in-out;
+}
+/* Kontainer utama */
+.content-container{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+@media (max-width: 768px) {
+    .jumbotron {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-info h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .cta-button {
+        flex-direction: column;
+        align-items: auto;
+        margin-right: 0px;
+    }
+
+    #navigation-bar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Semua kolom menjadi satu */
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%; /* Memastikan card tidak melebar di luar layar */
+    }
+
+    #Kontak {
+        margin-top: 20px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
