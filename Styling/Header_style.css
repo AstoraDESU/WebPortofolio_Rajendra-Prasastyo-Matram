@@ -15,7 +15,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(/WebPortofolio_Rajendra-Prasastyo-Matram/image/Background.jpg);
+    background-image: url(WebPortofolio_Rajendra-Prasastyo-Matram/image/Background.jpg);
     background-size: cover;
     background-position: center;
     padding: 20px;
